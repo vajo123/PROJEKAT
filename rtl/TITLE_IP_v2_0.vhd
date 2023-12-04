@@ -16,7 +16,7 @@ entity TITLE_IP_v2_0 is
         LETTER_MATRIX_ADDR_SIZE : integer := 16;
         --photo    
         PHOTO_RAM_WIDTH : integer := 8;
-        PHOTO_RAM_DEPTH : integer := 200000;
+        PHOTO_RAM_DEPTH : integer := 195000;
         PHOTO_ADDR_SIZE : integer := 18;
         --text   
         TEXT_RAM_WIDTH : integer := 8;
@@ -129,7 +129,7 @@ architecture arch_imp of TITLE_IP_v2_0 is
         LETTER_MATRIX_ADDR_SIZE : integer := 16;
         --photo    
         PHOTO_RAM_WIDTH : integer := 8;
-        PHOTO_RAM_DEPTH : integer := 200000;
+        PHOTO_RAM_DEPTH : integer := 195000;
         PHOTO_ADDR_SIZE : integer := 18;
         --text
         TEXT_RAM_WIDTH : integer := 8;
