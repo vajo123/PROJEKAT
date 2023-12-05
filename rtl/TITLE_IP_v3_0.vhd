@@ -2,7 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity TITLE_IP_v2_0 is
+entity TITLE_IP_v3_0 is
 	generic (
 		-- Users to add parameters here
         AXI_WIDTH: integer := 16;     
@@ -76,12 +76,12 @@ entity TITLE_IP_v2_0 is
 		s00_axi_rvalid	: out std_logic;
 		s00_axi_rready	: in std_logic
 	);
-end TITLE_IP_v2_0;
+end TITLE_IP_v3_0;
 
-architecture arch_imp of TITLE_IP_v2_0 is
+architecture arch_imp of TITLE_IP_v3_0 is
 
 	-- component declaration
-	component TITLE_IP_v2_0_S00_AXI is
+	component TITLE_IP_v3_0_S00_AXI is
 		generic (
 		C_S_AXI_DATA_WIDTH	: integer	:= 32;
 		C_S_AXI_ADDR_WIDTH	: integer	:= 4
@@ -113,9 +113,9 @@ architecture arch_imp of TITLE_IP_v2_0 is
 		S_AXI_RVALID	: out std_logic;
 		S_AXI_RREADY	: in std_logic
 		);
-	end component TITLE_IP_v2_0_S00_AXI;
-    
-    component TOP is
+	end component TITLE_IP_v3_0_S00_AXI;
+	
+	component TOP is
         generic (           
         --uvek saljemo primamo 16stobitne podatke pa ih rasporedjujemo posle           
         AXI_WIDTH: integer := 16;     
@@ -165,7 +165,7 @@ signal frame_finished_s: std_logic;
 begin
 
 -- Instantiation of Axi Bus Interface S00_AXI
-TITLE_IP_v2_0_S00_AXI_inst : TITLE_IP_v2_0_S00_AXI
+TITLE_IP_v3_0_S00_AXI_inst : TITLE_IP_v3_0_S00_AXI
 	generic map (
 		C_S_AXI_DATA_WIDTH	=> C_S00_AXI_DATA_WIDTH,
 		C_S_AXI_ADDR_WIDTH	=> C_S00_AXI_ADDR_WIDTH
@@ -197,7 +197,7 @@ TITLE_IP_v2_0_S00_AXI_inst : TITLE_IP_v2_0_S00_AXI
 		S_AXI_RVALID	=> s00_axi_rvalid,
 		S_AXI_RREADY	=> s00_axi_rready
 	);
-
+	
 TOP_inst: TOP
 	generic map(
              AXI_WIDTH=>AXI_WIDTH,
