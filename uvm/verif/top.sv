@@ -12,7 +12,7 @@ module title_top;
     // interface
     title_interface title_vif(clk);
 
-    TITLE_IP_v2_0 DUT(
+    TITLE_IP_v3_0 DUT(
                 .s00_axi_aclk                (clk),
                 //AXI STREAM SLAVE
                 .axis_s_data_in     (title_vif.axis_s_data_in),
