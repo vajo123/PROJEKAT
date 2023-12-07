@@ -17,7 +17,7 @@ class simple_seq_master extends base_seq_master;
 
     virtual task body(); 
         item = seq_item_master::type_id::create("item");
-        `uvm_info(get_name(), $sformatf("Broj podataka iz IP + 1: %d", number_of_data),   UVM_HIGH) 
+        `uvm_info(get_name(), $sformatf("Broj podataka iz IP: %d", number_of_data),   UVM_HIGH) 
 
         while(i < number_of_data) begin
             start_item(item); 

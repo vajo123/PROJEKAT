@@ -103,7 +103,7 @@ class test_simple2 extends test_base;
 			lite_seq.offset_reg = 0;
 			lite_seq.start(env.agent_lite.seqr);
 		
-			master_seq.number_of_data = IMAGE_2_ROW * 960 * 3 + 1;		    //SEND DATA FROM BRAM
+			master_seq.number_of_data = IMAGE_2_ROW * 960 * 3;		    //SEND DATA FROM BRAM
 			master_seq.start(env.agent_master.seqr);
 			
 		end
