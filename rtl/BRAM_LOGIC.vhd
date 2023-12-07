@@ -500,7 +500,8 @@ begin
                 input1_adder10_s <= size_of_photo_bram_reg(16 downto 0) & '0';
                 input2_adder10_s <= size_of_photo_bram_reg;            
                 size_of_photo_bram_next <= output_adder10_s(17 downto 0);
-               
+				
+		addr_next <= std_logic_vector(to_unsigned(1,PHOTO_ADDR_SIZE));		
                 state_next <= SEND_PHOTO_FROM_BRAM;
             else
                 state_next <= IDLE;
