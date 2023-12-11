@@ -14,16 +14,16 @@ set_property board_part digilentinc.com:zybo:part0:2.0 [current_project]
 # ===================================================================================
 # Ukljucivanje svih izvornih i simulacionih fajlova u projekat
 # ===================================================================================
-add_files -norecurse ../../rtl/adder.vhd
-add_files -norecurse ../../rtl/BRAM.vhd
-add_files -norecurse ../../rtl/BRAM_2READ_PORTS.vhd
-add_files -norecurse ../../rtl/BRAM_LOGIC.vhd
-add_files -norecurse ../../rtl/DATA_BRAM.vhd
-add_files -norecurse ../../rtl/multiplier.vhd
-add_files -norecurse ../../rtl/neg_adder.vhd
-add_files -norecurse ../../rtl/TITLE_IP_v3_0.vhd
-add_files -norecurse ../../rtl/TITLE_IP_v3_0_S00_AXI.vhd
-add_files -norecurse ../../rtl/TOP.vhd
+add_files -norecurse ../../rtl/dut/adder.vhd
+add_files -norecurse ../../rtl/dut/BRAM.vhd
+add_files -norecurse ../../rtl/dut/BRAM_2READ_PORTS.vhd
+add_files -norecurse ../../rtl/dut/BRAM_LOGIC.vhd
+add_files -norecurse ../../rtl/dut/DATA_BRAM.vhd
+add_files -norecurse ../../rtl/dut/multiplier.vhd
+add_files -norecurse ../../rtl/dut/neg_adder.vhd
+add_files -norecurse ../../rtl/dut/TITLE_IP_v1_0.vhd
+add_files -norecurse ../../rtl/dut/TITLE_IP_v1_0_S00_AXI.vhd
+add_files -norecurse ../../rtl/dut/TOP.vhd
 
 update_compile_order -fileset sources_1
 
